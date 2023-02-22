@@ -51,8 +51,7 @@ class HeaderDetailsWidget extends StatelessWidget {
                         height: 40,
                         backgroundColor: AppColors.secondaryColor,
                         onPressed: () {
-                          Navigator.pushNamed(
-                              context, AppRoutes.homeScreenRoutes);
+                          Navigator.pop(context);
                         },
                         textDirection: TextDirection.ltr,
                         child: SvgPicture.asset(
@@ -79,7 +78,7 @@ class HeaderDetailsWidget extends StatelessWidget {
                         CustomButton(
                             width: 40,
                             height: 40,
-                            backgroundColor: AppColors.secondaryColor ,
+                            backgroundColor: AppColors.secondaryColor,
                             onPressed: () {},
                             textDirection: TextDirection.ltr,
                             child: SvgPicture.asset(

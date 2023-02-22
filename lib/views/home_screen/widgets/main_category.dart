@@ -14,19 +14,19 @@ class MainCategoryWidget extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 90.0,
-          width: 90.0,
+          height: 80.0,
+          width: 80.0,
           child: CircleAvatar(
-            radius: 45.0,
+            radius: 40.0,
             backgroundColor: Colors.red,
             child: CircleAvatar(
               backgroundColor: Colors.white,
-              radius: 43,
+              radius: 38,
               child: Container(
-                height: 40.5 * 2,
-                width: 40.5 * 2,
+                height: 36* 2,
+                width: 36 * 2,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40.5),
+                  borderRadius: BorderRadius.circular(36),
                   image: DecorationImage(
                     image: AssetImage(imagePath),
                     fit: BoxFit.cover,

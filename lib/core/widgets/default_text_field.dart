@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 
 
 class DefaultTextFieldInfoWidget extends StatelessWidget {
-  final IconData prefixIconData;
-  final IconData? suffixIconData;
+  final String prefixImageIcon;
+
   final String hintText;
   final TextEditingController controller;
   final Function(String)? onChanged;
   final double? width; 
-  // final IconData ?
+ 
   const DefaultTextFieldInfoWidget(
       {super.key,
-      required this.prefixIconData,
+      required this.prefixImageIcon,
       required this.hintText,
       required this.controller,
       this.onChanged,
-      this.suffixIconData ,
+     
       this.width});
 
   @override
@@ -26,11 +26,11 @@ class DefaultTextFieldInfoWidget extends StatelessWidget {
           top: 10.0, bottom: 10.0, left: 14.0, right: 14.0),
       width: width?? MediaQuery.of(context).size.width,
       child: TextField(
+        textAlign: TextAlign.center, 
         onChanged: onChanged,
         decoration: customInputDecoration(
-           //  colorIcon: AppColors.secondaryColor,
-           colorIcon: Colors.red,
-            prefixIconData: prefixIconData,
+           colorIcon: const Color(0xff585874) ,
+            prefixImageIcon: prefixImageIcon,
             hintTextString: hintText),
         controller: controller,
         cursorColor: const Color(0xff1d3557),

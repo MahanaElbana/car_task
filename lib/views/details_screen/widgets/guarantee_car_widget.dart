@@ -1,3 +1,4 @@
+import 'package:car_task/core/app_colors.dart';
 import 'package:car_task/core/widgets/custom_text_widet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -21,7 +22,7 @@ class GuaranteeCarWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0)
-          ,color: Color(0xff800000),
+          ,color:  AppColors.guaranteeBackGroundColor,
         ),
         alignment: Alignment.center,
         height: 40.0,
@@ -32,14 +33,14 @@ class GuaranteeCarWidget extends StatelessWidget {
           
           
           children: [
-              SizedBox(width: 6,) ,
+             const  SizedBox(width: 6,) ,
               SvgPicture.asset(
                     imagePath,
                     width: 24.0,
                     height: 24.0,
                     color: Colors.white,
                   ),
-                  SizedBox(width: 20,) ,
+               const   SizedBox(width: 20,) ,
             CustomText(
               textString: title,
               textColor: Colors.white,

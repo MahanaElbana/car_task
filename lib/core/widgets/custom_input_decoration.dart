@@ -11,19 +11,19 @@ InputDecoration customInputDecoration(
     filled: true,
     fillColor: Colors.white,
     hintStyle: const TextStyle(
-        color: const Color(0xff585874),
+        color:  Color(0xff585874),
         fontSize: 17.0,
         fontWeight: FontWeight.bold),
 
     //================= enabledBorder ========================//
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(14.0),
-      borderSide: const BorderSide(color: const Color(0xff585874), width: 1.0),
+      borderSide: const BorderSide(color:  Color(0xff585874), width: 1.0),
     ),
     // //================= focusedBorder ========================//
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(14.0),
-      borderSide: const BorderSide(color: const Color(0xff585874), width: 1.5),
+      borderSide: const BorderSide(color:  Color(0xff585874), width: 1.5),
     ),
     //================= prefixIcon ========================//
     prefixIcon: Container(

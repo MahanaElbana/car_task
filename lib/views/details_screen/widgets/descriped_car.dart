@@ -1,4 +1,4 @@
-
+import 'package:car_task/core/app_colors.dart';
 import 'package:car_task/core/widgets/custom_text_widet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,13 +6,15 @@ import 'package:flutter_svg/svg.dart';
 class DerscripedCar extends StatelessWidget {
   final String imagePath;
   final String title;
-  final String value;
-  const DerscripedCar({
-    Key? key,
-    required this.imagePath,
-    required this.title,
-    required this.value,
-  }) : super(key: key);
+  final String? value;
+  final bool? status;
+  const DerscripedCar(
+      {Key? key,
+      required this.imagePath,
+      required this.title,
+      this.value,
+      this.status})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +22,8 @@ class DerscripedCar extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Container(
         alignment: Alignment.bottomRight,
-        // height: 30.0,
         margin: const EdgeInsets.only(right: 24.0),
-        color: Colors.blueGrey.shade50,
+        color: AppColors.secondaryColor,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,23 +42,26 @@ class DerscripedCar extends StatelessWidget {
                   const SizedBox(
                     width: 10.0,
                   ),
-                   CustomText(
+                  CustomText(
                     textString: title,
-                    textColor: Colors.black,
+                    textColor: AppColors.textColor,
                     fontSize: 16.0,
-                  
                   )
                 ],
               ),
             ),
-             Expanded(
-              child: CustomText(
-                textString: value,
-                textColor: Colors.black,
-                fontSize: 16.0,
-          
-              ),
-            )
+            value == null
+                ? Expanded(
+                    child: Container(
+                        alignment: Alignment.centerRight,
+                        child: const Icon(Icons.task_alt_rounded)))
+                : Expanded(
+                    child: CustomText(
+                      textString: value!,
+                      textColor: AppColors.textColor,
+                      fontSize: 16.0,
+                    ),
+                  )
           ],
         ),
       ),

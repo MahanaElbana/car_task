@@ -1,3 +1,4 @@
+import 'package:car_task/core/app_strings.dart';
 import 'package:car_task/views/details_screen/details_screen.dart';
 import 'package:car_task/views/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,14 @@ class AppRouteGenerator {
       case AppRoutes.homeScreenRoutes:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case AppRoutes.detailsScreen:
-        return MaterialPageRoute(builder: (_) => const DetailsScreen());
+        return MaterialPageRoute(
+          builder: (_) {
+            final args = settings.arguments as DetailsScreen;
+            return DetailsScreen(
+              heroTage: args.heroTage,
+            );
+          },
+        );
 
       default:
         return unDefinedRoute();
@@ -26,9 +34,9 @@ class AppRouteGenerator {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
         appBar: AppBar(
-          title: const Text("No Route Found"),
+          title: const Text(AppStrings.noRouteFound),
         ),
-        body: const Center(child: Text("No Route Found")),
+        body: const Center(child: Text(AppStrings.noRouteFound)),
       ),
     );
   }

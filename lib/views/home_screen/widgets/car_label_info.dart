@@ -1,3 +1,4 @@
+import 'package:car_task/core/app_colors.dart';
 import 'package:car_task/core/widgets/custom_text_widet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -23,9 +24,10 @@ class CarLabelInfo extends StatelessWidget {
       padding: const EdgeInsets.all(4.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),
-        color:  Colors.blueGrey.shade50
+        color:  AppColors.secondaryColor ,
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset(
             imagePath,
@@ -34,12 +36,12 @@ class CarLabelInfo extends StatelessWidget {
           ),
           CustomText(
             textString: title,
-            textColor: Colors.black,
+            textColor: AppColors.textColor,
             fontSize: typeView == TypeView.small ? 10 : 16.0,
           ),
           CustomText(
             textString: value,
-            textColor: Colors.black,
+            textColor: AppColors.textColor,
             fontSize: typeView == TypeView.small ? 11 : 18.0,
             fontWeight: FontWeight.bold,
           ),

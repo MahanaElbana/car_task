@@ -22,7 +22,15 @@ static const String homeAd2 = "$imagePath${iconsPath}Home - Ad2.svg";
 static const String homeAd3 = "$imagePath${iconsPath}Home - Ad3.svg";
 static const String homeAd4 = "$imagePath${iconsPath}Home - Ad4.svg";
 static const String carPageSlindr = "$imagePath${iconsPath}Car Page - Slindr.svg";
-
+static const String homeNotification = "$imagePath${iconsPath}Home - Notification .svg";
+static const String menuFav = "$imagePath${iconsPath}Menu - Fav.svg";
+static const String back = "$imagePath${iconsPath}Back.svg";
+static const String carPageMakfula = "$imagePath${iconsPath}Car Page - Makfula.svg";
+static const String carPageFav = "$imagePath${iconsPath}Car Page - Fav.svg";
+static const String carPageCall = "$imagePath${iconsPath}Car Page - Call.svg";
+static const String carPageShare= "$imagePath${iconsPath}Car Page - Share.svg";
+static const String carPageBook= "$imagePath${iconsPath}Car Page - Book.svg";
+static const String carPageChatByWHatsapp= "$imagePath${iconsPath}Car Page - Chat by WHatsapp.svg";
 
 
 }

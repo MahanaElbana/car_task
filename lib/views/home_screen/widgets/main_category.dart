@@ -1,3 +1,4 @@
+import 'package:car_task/core/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class MainCategoryWidget extends StatelessWidget {
@@ -18,9 +19,9 @@ class MainCategoryWidget extends StatelessWidget {
           width: 80.0,
           child: CircleAvatar(
             radius: 40.0,
-            backgroundColor: Colors.red,
+            backgroundColor:AppColors. mainCategoryBorderColor,
             child: CircleAvatar(
-              backgroundColor: Colors.white,
+              backgroundColor: AppColors. mainCategoryBackGroundColor,
               radius: 38,
               child: Container(
                 height: 36* 2,

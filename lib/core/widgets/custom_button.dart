@@ -6,13 +6,12 @@ class CustomButton extends StatelessWidget {
       {super.key,
       required this.width,
       required this.height,
-     
       required this.backgroundColor,
       required this.onPressed,
       required this.textDirection,
-    
-      this.icon,
-      this.borderColor, this.customText});
+   
+      this.borderColor,
+      this.customText, this.child});
 
   final double width;
   final double height;
@@ -20,10 +19,10 @@ class CustomButton extends StatelessWidget {
   final Color backgroundColor;
   final Function onPressed;
   final TextDirection textDirection;
-  final Icon? icon;
+ 
   final Color? borderColor;
-  final CustomText ? customText;
-
+  final CustomText? customText;
+  final Widget? child; 
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -33,7 +32,7 @@ class CustomButton extends StatelessWidget {
         child: Container(
           width: width,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(width/2),
+            borderRadius: BorderRadius.circular(width / 2),
             color: backgroundColor,
             border: borderColor != null
                 ? Border.all(color: borderColor!, width: 1.5)
@@ -44,7 +43,7 @@ class CustomButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              if (icon != null) icon!,
+              if (child != null) child!,
               if (customText != null) customText!,
             ],
           ),

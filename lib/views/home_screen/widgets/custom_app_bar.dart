@@ -1,5 +1,7 @@
 import 'package:badges/badges.dart' as badges;
+import 'package:car_task/core/app_colors.dart';
 import 'package:car_task/core/assests_manager.dart';
+import 'package:car_task/core/widgets/custom_text_widet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -18,30 +20,32 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       //==========================  leading ========================== //
 
-      leading: badges.Badge(
-        position: badges.BadgePosition.topStart(
-          top: -11.0,
-          start: 14,
-        ),
-        badgeContent: const Text(
-          '2',
-          style: TextStyle(color: Colors.white, fontSize: 11),
-        ),
-        onTap: () => notificationOnPressed(),
-        badgeStyle: const badges.BadgeStyle(
-          shape: badges.BadgeShape.circle,
-          badgeColor: Colors.red,
-          padding: EdgeInsets.all(7),
-          borderSide: BorderSide(color: Colors.white, width: 2),
-          elevation: 0,
-        ),
-        child: const Icon(
-          Icons.notifications_none_outlined,
-          color: Colors.white,
-          size: 33,
+      leading: Padding(
+        padding: const EdgeInsets.only(left: 10.0, top: 8.0),
+        child: badges.Badge(
+          position: badges.BadgePosition.topStart(
+            top: -14.0,
+            start: 11,
+          ),
+          badgeContent: const CustomText(
+              textString: '2', textColor: AppColors.appBarColorIcons , fontSize: 12),
+          onTap: () => notificationOnPressed(),
+          badgeStyle: const badges.BadgeStyle(
+            shape: badges.BadgeShape.circle,
+            badgeColor: AppColors.appBarbadgedColor,
+            padding: EdgeInsets.all(7),
+            borderSide: BorderSide(color: AppColors.appBarColorIcons, width: 2),
+            elevation: 0,
+          ),
+          child: SvgPicture.asset(
+            AppIconsAssets.homeNotification,
+            color: AppColors.appBarColorIcons,
+            width: 26.0,
+            height: 26.0,
+          ),
         ),
       ),
-      backgroundColor: Colors.black.withOpacity(0.3),
+      backgroundColor:AppColors.appBarBackGroundColor.withOpacity(0.6),
       elevation: 0.0,
       //==========================  Action  ========================== //
       actions: [
@@ -50,7 +54,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: SvgPicture.asset(
             AppIconsAssets.homeMenu,
             semanticsLabel: 'Home Menu',
-            color: Colors.white,
+            color: AppColors.appBarColorIcons,
             width: 18.0,
             height: 18.0,
           ),

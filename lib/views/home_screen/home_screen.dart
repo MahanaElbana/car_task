@@ -100,7 +100,8 @@ class HomeScreen extends StatelessWidget {
                 //     mainAxisSpacing: 8),
                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  mainAxisSpacing: 2,
+                  mainAxisSpacing: 10.0,
+                  crossAxisSpacing: 2.0
                 ),
                 itemCount: subCategories.length * 2,
                 itemBuilder: (BuildContext ctx, index) {
@@ -124,37 +125,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             //====================================================================//
-
-            // Container(
-            //   padding: const EdgeInsets.only(right: 2, left: 2),
-            //   child: GridView(
-            //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            //       crossAxisCount: 2,
-            //       mainAxisSpacing: 2,
-            //     ),
-            //     physics: const BouncingScrollPhysics(),
-            //     shrinkWrap: true,
-            //     semanticChildCount: 2,
-            //     children: subCategories.map((item) {
-            //       return GestureDetector(
-            //         onTap: () {
-            //           Navigator.of(context).pushNamed(AppRoutes.detailsScreen,
-            //               arguments: DetailsScreen(heroTage: "0"));
-            //         },
-            //         child: Hero(
-            //           transitionOnUserGestures: true,
-            //           tag: "$item",
-            //           child: const Material(
-            //             type: MaterialType.transparency,
-            //             child: SubItemWidget(
-            //               index: 0,
-            //             ),
-            //           ),
-            //         ),
-            //       );
-            //     }).toList(),
-            //   ),
-            // ),
 
             //--------------------- SizedBox -----------------//
             const SizedBox(height: 18.0),

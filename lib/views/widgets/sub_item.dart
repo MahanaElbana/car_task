@@ -16,16 +16,16 @@ class SubItemWidget extends StatelessWidget {
         children: [
           Container(
            // height: 190.0,
-           height: MediaQuery.of(context).size.width/2,
+           height: MediaQuery.of(context).size.width/2 ,
            width: MediaQuery.of(context).size.width/2,
             color: Colors.white,
            //  width: 179,
           ),
           Container(
             alignment: Alignment.topCenter,
-            // height: 150,
+           // height: 150,
             // width: 179,
-            height: MediaQuery.of(context).size.width/2,
+           height: MediaQuery.of(context).size.width/2 - 55,
             width: MediaQuery.of(context).size.width/2,
             decoration:  BoxDecoration(
               image: DecorationImage(

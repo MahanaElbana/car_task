@@ -27,6 +27,7 @@ class CarLabelInfo extends StatelessWidget {
         color:  AppColors.secondaryColor ,
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset(

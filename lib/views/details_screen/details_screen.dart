@@ -105,6 +105,7 @@ class DetailsScreen extends StatelessWidget {
                     return GestureDetector(
                       onTap: () {},
                       child: SubItemWidget(
+                        listVieWGridViewType: ListVieWGridViewType.listViewType,
                         index: index,
                       ),
                     );

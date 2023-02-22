@@ -116,6 +116,7 @@ class HomeScreen extends StatelessWidget {
                       child: Material(
                         type: MaterialType.transparency,
                         child: SubItemWidget(
+                          listVieWGridViewType: ListVieWGridViewType.gridViewType,
                           index: index,
                         ),
                       ),

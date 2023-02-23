@@ -19,8 +19,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final double screenWidth = MediaQuery.of(context).size.width;
-    // print(screenWidth);
+    final double screenWidth = MediaQuery.of(context).size.width;
+    print(screenWidth);
     return Scaffold(
       //================= custom AppBar =================//
       appBar: CustomAppBar(
@@ -102,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 10.0,
-                  crossAxisSpacing: 2.0
+                  crossAxisSpacing: 1.5
                 ),
                 itemCount: subCategories.length * 2,
                 itemBuilder: (BuildContext ctx, index) {

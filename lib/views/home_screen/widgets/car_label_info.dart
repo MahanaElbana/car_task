@@ -39,12 +39,12 @@ class CarLabelInfo extends StatelessWidget {
           CustomText(
             textString: title,
             textColor: AppColors.textColor,
-            fontSize: typeView == TypeView.small ? 10 : 16.0,
+            fontSize: typeView == TypeView.small ? 8.5 : 16.0,
           ),
           CustomText(
             textString: value,
             textColor: AppColors.textColor,
-            fontSize: typeView == TypeView.small ? 11 : 18.0,
+            fontSize: typeView == TypeView.small ? 10 : 18.0,
             fontWeight: FontWeight.bold,
           ),
         ],

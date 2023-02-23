@@ -1,3 +1,4 @@
+import 'package:car_task/core/app_enums.dart';
 import 'package:car_task/core/assests_manager.dart';
 import 'package:car_task/core/widgets/custom_text_widet.dart';
 import 'package:car_task/views/home_screen/widgets/car_label_info.dart';
@@ -11,31 +12,26 @@ class SubItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double suitableWidth = ListVieWGridViewType.gridViewType == listVieWGridViewType
+                ? MediaQuery.of(context).size.width / 2
+                : 182 ;  
+
     return SizedBox(
-      // height: 180,
       child: Stack(
-      
         children: [
           Container(
-        
             height: ListVieWGridViewType.gridViewType == listVieWGridViewType
                 ? MediaQuery.of(context).size.width / 2
                 : 190.0,
-            width: ListVieWGridViewType.gridViewType == listVieWGridViewType
-                ? MediaQuery.of(context).size.width / 2
-                :  182,
+            width: suitableWidth ,
             color: Colors.white,
-            //  width: 179,
           ),
           Container(
             alignment: Alignment.topCenter,
-
-             height: ListVieWGridViewType.gridViewType == listVieWGridViewType
-                ? MediaQuery.of(context).size.width / 2 -55
+            height: ListVieWGridViewType.gridViewType == listVieWGridViewType
+                ? MediaQuery.of(context).size.width / 2 - 55
                 : 180,
-            width: ListVieWGridViewType.gridViewType == listVieWGridViewType
-                ? MediaQuery.of(context).size.width / 2
-                :  182,
+            width: suitableWidth ,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(index % 2 == 0
@@ -47,12 +43,8 @@ class SubItemWidget extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.only(top: 2.0),
-            // width: 179,
             height: 30,
-            //  height: MediaQuery.of(context).size.width/2,
-           width: ListVieWGridViewType.gridViewType == listVieWGridViewType
-                ? MediaQuery.of(context).size.width / 2
-                :  182,
+            width: suitableWidth , 
             alignment: Alignment.topCenter,
             color: Colors.white.withOpacity(0.8),
             child: const CustomText(
@@ -65,16 +57,11 @@ class SubItemWidget extends StatelessWidget {
             child: Directionality(
               textDirection: TextDirection.rtl,
               child: Container(
-                // height: MediaQuery.of(context).size.width/2,
-                  width: ListVieWGridViewType.gridViewType == listVieWGridViewType
-                ? MediaQuery.of(context).size.width / 2
-                : 182,
+                width:suitableWidth ,
                 height: 70,
                 alignment: Alignment.centerLeft,
-                //  width:179,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  // mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Expanded(
                       child: CarLabelInfo(
@@ -119,7 +106,4 @@ class SubItemWidget extends StatelessWidget {
   }
 }
 
-enum ListVieWGridViewType {
-  listViewType,
-  gridViewType,
-}
+

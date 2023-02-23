@@ -12,9 +12,10 @@ class SubItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double suitableWidth = ListVieWGridViewType.gridViewType == listVieWGridViewType
-                ? MediaQuery.of(context).size.width / 2
-                : 182 ;  
+    double suitableWidth =
+        ListVieWGridViewType.gridViewType == listVieWGridViewType
+            ? MediaQuery.of(context).size.width / 2
+            : 182;
 
     return SizedBox(
       child: Stack(
@@ -23,7 +24,7 @@ class SubItemWidget extends StatelessWidget {
             height: ListVieWGridViewType.gridViewType == listVieWGridViewType
                 ? MediaQuery.of(context).size.width / 2
                 : 190.0,
-            width: suitableWidth ,
+            width: suitableWidth,
             color: Colors.white,
           ),
           Container(
@@ -31,7 +32,7 @@ class SubItemWidget extends StatelessWidget {
             height: ListVieWGridViewType.gridViewType == listVieWGridViewType
                 ? MediaQuery.of(context).size.width / 2 - 55
                 : 180,
-            width: suitableWidth ,
+            width: suitableWidth,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(index % 2 == 0
@@ -44,7 +45,7 @@ class SubItemWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(top: 2.0),
             height: 30,
-            width: suitableWidth , 
+            width: suitableWidth,
             alignment: Alignment.topCenter,
             color: Colors.white.withOpacity(0.8),
             child: const CustomText(
@@ -57,7 +58,7 @@ class SubItemWidget extends StatelessWidget {
             child: Directionality(
               textDirection: TextDirection.rtl,
               child: Container(
-                width:suitableWidth ,
+                width: suitableWidth,
                 height: 70,
                 alignment: Alignment.centerLeft,
                 child: Row(
@@ -105,5 +106,3 @@ class SubItemWidget extends StatelessWidget {
     );
   }
 }
-
-

@@ -72,6 +72,7 @@ class SubItemWidget extends StatelessWidget {
                         value: "12,700",
                       ),
                     ),
+                    SizedBox(width: 0.6,) , 
                     Expanded(
                       child: CarLabelInfo(
                         typeView: TypeView.small,
@@ -80,6 +81,7 @@ class SubItemWidget extends StatelessWidget {
                         value: "2019",
                       ),
                     ),
+                                        SizedBox(width: 0.6,) , 
                     Expanded(
                       child: CarLabelInfo(
                         typeView: TypeView.small,
@@ -88,6 +90,7 @@ class SubItemWidget extends StatelessWidget {
                         value: "20000",
                       ),
                     ),
+                      SizedBox(width: 0.6,) , 
                     Expanded(
                       child: CarLabelInfo(
                         typeView: TypeView.small,

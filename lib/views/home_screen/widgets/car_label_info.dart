@@ -1,4 +1,5 @@
 import 'package:car_task/core/app_colors.dart';
+import 'package:car_task/core/app_enums.dart';
 import 'package:car_task/core/widgets/custom_text_widet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -52,4 +53,4 @@ class CarLabelInfo extends StatelessWidget {
   }
 }
 
-enum TypeView { large, small }
+

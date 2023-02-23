@@ -48,8 +48,8 @@ class SubItemWidget extends StatelessWidget {
             width: suitableWidth,
             alignment: Alignment.topCenter,
             color: Colors.white.withOpacity(0.8),
-            child: const CustomText(
-                fontSize: 14,
+            child:  CustomText(
+                fontSize: suitableWidth*2 < 350 ? 12 : (suitableWidth*2 > 450 ? 18.0:14),
                 textColor: Colors.black,
                 textString: "جي ام سي | يوكن | الفئة الرابعة"),
           ),

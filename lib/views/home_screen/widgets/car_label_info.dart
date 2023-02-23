@@ -18,6 +18,8 @@ class CarLabelInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.of(context).size.width;
     return Container(
       width: typeView == TypeView.large
           ? MediaQuery.of(context).size.width / 3 - 20

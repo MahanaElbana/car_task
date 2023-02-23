@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
-    // print(screenWidth);
+    print(screenWidth);
     return Scaffold(
       //================= custom AppBar =================//
       appBar: CustomAppBar(
